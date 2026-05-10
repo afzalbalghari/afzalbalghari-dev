@@ -1,36 +1,110 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Developer Portfolio
+
+A modern SaaS-style developer portfolio built with **Next.js 14**, **TypeScript**, **Tailwind CSS**, and **Framer Motion**.
+
+## Stack
+
+| Tool | Purpose |
+|---|---|
+| Next.js 14 (App Router) | Framework & routing |
+| TypeScript | Type safety |
+| Tailwind CSS | Styling |
+| Framer Motion | Animations |
+| `clsx` + `tailwind-merge` | Class merging utility |
+
+## Project Structure
+
+```
+src/
+├── app/
+│   ├── globals.css          # Global styles + Tailwind
+│   ├── layout.tsx           # Root layout (fonts, metadata, nav/footer)
+│   └── page.tsx             # Home page — composes all sections
+│
+├── components/
+│   ├── layout/
+│   │   ├── Navbar.tsx       # Fixed nav with scrollspy + mobile menu
+│   │   ├── Footer.tsx       # Footer with social links
+│   │   └── index.ts
+│   │
+│   ├── sections/
+│   │   ├── HeroSection.tsx
+│   │   ├── ExperienceSection.tsx
+│   │   ├── ProjectsSection.tsx
+│   │   ├── DevOpsSection.tsx
+│   │   ├── SkillsSection.tsx
+│   │   ├── EducationSection.tsx
+│   │   ├── CertificationsSection.tsx
+│   │   ├── BlogSection.tsx
+│   │   ├── ContactSection.tsx
+│   │   └── index.ts
+│   │
+│   └── ui/
+│       ├── Badge.tsx        # Colored badge chip
+│       ├── Button.tsx       # Primary/secondary button + link
+│       ├── SectionHeader.tsx
+│       ├── Tag.tsx          # Monospace tag chip
+│       └── index.ts
+│
+├── data/                    # Static portfolio content (edit here!)
+│   ├── experience.ts
+│   ├── projects.ts
+│   ├── skills.ts
+│   ├── devops.ts
+│   ├── education.ts
+│   ├── certifications.ts
+│   ├── blog.ts
+│   └── index.ts
+│
+├── hooks/
+│   ├── useScrollspy.ts      # Active nav link tracking
+│   └── useContactForm.ts    # Form state + submit handler
+│
+├── lib/
+│   ├── motion.ts            # Framer Motion reusable variants
+│   └── utils.ts             # cn() utility (clsx + tailwind-merge)
+│
+└── types/
+    └── index.ts             # All TypeScript interfaces
+```
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
+# Install dependencies
+npm install
+
+# Start dev server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+# Type check
+npm run type-check
+
+# Build for production
+npm run build
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Personalizing
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+All content lives in `src/data/`. Edit the files there — no component changes needed:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- `experience.ts` — Work history
+- `projects.ts` — Featured projects
+- `skills.ts` — Developer skill groups
+- `devops.ts` — DevOps/cloud tools
+- `education.ts` — Education background
+- `certifications.ts` — Certs (mark `upcoming: true` for in-progress)
+- `blog.ts` — Blog post previews
 
-## Learn More
+Update your personal details in:
+- `src/app/layout.tsx` — Page title, description, OG metadata
+- `src/components/layout/Footer.tsx` — Social links
+- `src/components/sections/ContactSection.tsx` — Contact info
 
-To learn more about Next.js, take a look at the following resources:
+## Deploy
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+One-click deploy to Vercel:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+npx vercel
+```
