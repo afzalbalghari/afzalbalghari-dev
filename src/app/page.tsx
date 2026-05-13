@@ -1,5 +1,6 @@
 import {
   HeroSection,
+  AboutSection,
   ExperienceSection,
   ProjectsSection,
   DevOpsSection,
@@ -14,6 +15,7 @@ export default function HomePage() {
   return (
     <>
       <HeroSection />
+      <AboutSection />
       <ExperienceSection />
       <ProjectsSection />
       <DevOpsSection />
