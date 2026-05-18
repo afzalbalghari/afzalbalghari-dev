@@ -11,37 +11,38 @@ const config: Config = {
     extend: {
       fontFamily: {
         display: ["var(--font-syne)", "sans-serif"],
-        body: ["var(--font-dm-sans)", "sans-serif"],
-        mono: ["var(--font-dm-mono)", "monospace"],
+        body:    ["var(--font-dm-sans)", "sans-serif"],
+        mono:    ["var(--font-dm-mono)", "monospace"],
       },
       colors: {
-        bg: {
-          primary: "#0a0b0f",
-          secondary: "#0f1015",
-          tertiary: "#14151c",
-        },
-        surface: {
-          DEFAULT: "#1a1b23",
-          hover: "#1f2029",
-        },
-        border: {
-          DEFAULT: "#2a2b35",
-          hover: "#353645",
-        },
-        accent: {
-          purple: "#6c63ff",
-          teal: "#4ecca3",
-          coral: "#ff6b6b",
-          yellow: "#f4c430",
-        },
-        text: {
-          primary: "#f0f0f5",
-          secondary: "#9a9ab0",
-          muted: "#5a5a70",
-        },
+        "bg-primary":    "#0a0b0f",
+        "bg-secondary":  "#0f1015",
+        "bg-tertiary":   "#14151c",
+        "surface":       "#1a1b23",
+        "surface-hover": "#1f2029",
+        "border":        "#2a2b35",
+        "border-hover":  "#353645",
+        "accent-purple": "#6c63ff",
+        "accent-teal":   "#4ecca3",
+        "accent-coral":  "#ff6b6b",
+        "accent-yellow": "#f4c430",
+        "text-primary":  "#f0f0f5",
+        "text-secondary":"#9a9ab0",
+        "text-muted":    "#5a5a70",
+      },
+      backgroundImage: {
+        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
       },
       animation: {
-        pulse: "pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite",
+        float: "float 6s ease-in-out infinite",
+        scan:  "scan 4s linear infinite",
+      },
+      keyframes: {
+        float: {
+          "0%,100%": { transform: "translateY(0px)"  },
+          "50%":     { transform: "translateY(-14px)" },
+        },
+        scan: { to: { top: "200%" } },
       },
     },
   },
