@@ -1,4 +1,4 @@
-// ─── Experience ────────────────────────────────────────────────────────────────
+// ─── Experience ───────────────────────────────────────────────
 export interface ExperienceItem {
   id: string;
   role: string;
@@ -9,7 +9,7 @@ export interface ExperienceItem {
   tags: string[];
 }
 
-// ─── Projects ──────────────────────────────────────────────────────────────────
+// ─── Projects ─────────────────────────────────────────────────
 export type BadgeVariant = "accent" | "green" | "yellow" | "red";
 
 export interface ProjectTag {
@@ -20,6 +20,7 @@ export interface ProjectTag {
 export interface Project {
   id: string;
   icon: string;
+  image?: string;
   title: string;
   description: string;
   tags: ProjectTag[];
@@ -27,12 +28,13 @@ export interface Project {
   featured?: boolean;
 }
 
-// ─── Skills ────────────────────────────────────────────────────────────────────
+// ─── Skills ───────────────────────────────────────────────────
 export type SkillColor = "purple" | "teal" | "yellow" | "coral";
 
 export interface Skill {
   name: string;
-  level: number; // 0–100
+  level: number;
+  logo?: string;
 }
 
 export interface SkillGroup {
@@ -43,17 +45,18 @@ export interface SkillGroup {
   skills: Skill[];
 }
 
-// ─── DevOps ────────────────────────────────────────────────────────────────────
+// ─── DevOps ───────────────────────────────────────────────────
 export type ProficiencyLevel = "Beginner" | "Intermediate" | "Advanced";
 
 export interface DevOpsTool {
   id: string;
-  icon: string;
+  icon?: string;
+  logo?: string;
   name: string;
   level: ProficiencyLevel;
 }
 
-// ─── Education ─────────────────────────────────────────────────────────────────
+// ─── Education ────────────────────────────────────────────────
 export interface EducationItem {
   id: string;
   icon: string;
@@ -64,7 +67,7 @@ export interface EducationItem {
   badges?: string[];
 }
 
-// ─── Certifications ────────────────────────────────────────────────────────────
+// ─── Certifications ───────────────────────────────────────────
 export interface Certification {
   id: string;
   icon: string;
@@ -73,7 +76,7 @@ export interface Certification {
   upcoming?: boolean;
 }
 
-// ─── Blog ──────────────────────────────────────────────────────────────────────
+// ─── Blog ─────────────────────────────────────────────────────
 export interface BlogPost {
   id: string;
   emoji: string;
@@ -84,7 +87,7 @@ export interface BlogPost {
   href: string;
 }
 
-// ─── Navigation ────────────────────────────────────────────────────────────────
+// ─── Navigation ───────────────────────────────────────────────
 export interface NavLink {
   label: string;
   href: string;

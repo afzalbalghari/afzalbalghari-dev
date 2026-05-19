@@ -1,4 +1,7 @@
+"use client";
+
 import Link from "next/link";
+import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 
 type Variant = "primary" | "secondary";
@@ -15,20 +18,12 @@ interface ButtonProps {
 
 const variantStyles: Record<Variant, string> = {
   primary:
-    "bg-accent-purple text-white border-transparent hover:bg-transparent hover:border-accent-purple hover:text-accent-purple",
+    "bg-accent-purple text-white border-transparent hover:shadow-[0_0_24px_rgba(108,99,255,0.5)]",
   secondary:
-    "bg-transparent text-text-primary border-border hover:border-border-hover hover:bg-surface",
+    "bg-transparent text-text-primary border-border hover:border-accent-purple/60",
 };
 
-export function Button({
-  children,
-  href,
-  variant = "primary",
-  className,
-  onClick,
-  type = "button",
-  disabled,
-}: ButtonProps) {
+export function Button({ children, href, variant = "primary", className, onClick, type = "button", disabled }: ButtonProps) {
   const base = cn(
     "inline-flex items-center gap-2 px-6 py-[11px] rounded-lg",
     "text-sm font-mono border transition-all duration-200",
@@ -37,17 +32,23 @@ export function Button({
     className
   );
 
+  const motionProps = {
+    whileHover: disabled ? {} : { scale: 1.04, y: -2 },
+    whileTap:   disabled ? {} : { scale: 0.97 },
+    transition: { type: "spring" as const, stiffness: 300, damping: 22 },
+  };
+
   if (href) {
     return (
-      <Link href={href} className={base}>
-        {children}
-      </Link>
+      <motion.div {...motionProps}>
+        <Link href={href} className={base}>{children}</Link>
+      </motion.div>
     );
   }
 
   return (
-    <button type={type} onClick={onClick} disabled={disabled} className={base}>
+    <motion.button {...motionProps} type={type} onClick={onClick} disabled={disabled} className={base}>
       {children}
-    </button>
+    </motion.button>
   );
 }
