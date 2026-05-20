@@ -3,6 +3,7 @@
 import { motion, useMotionValue, useTransform, useSpring } from "framer-motion";
 import { useRef } from "react";
 import { fadeUp, blurIn, staggerContainer, viewportOnce } from "@/lib/motion";
+import Image from "next/image";
 
 const STATS = [
   { value: "2+",  label: "years exp."      },
@@ -43,15 +44,19 @@ function AvatarCircle() {
       {/* Gradient ring border */}
       <div className="p-[3px] rounded-full bg-gradient-to-br from-accent-purple via-[#9b8fff] to-accent-teal shadow-2xl">
         {/* Circle image area */}
-        <div className="w-[200px] h-[200px] rounded-full overflow-hidden bg-gradient-to-br from-[#1e1f2e] to-[#0f1015] flex items-center justify-center relative">
-          {/*
-            ── REPLACE THIS DIV WITH YOUR PHOTO ──
-            Example:
-            <Image src="/me.jpg" alt="Your Name" fill className="object-cover" />
-          */}
-          <div className="absolute inset-0 bg-gradient-to-br from-accent-purple/30 via-transparent to-accent-teal/20" />
-          <span className="relative z-10 text-[72px] select-none">👨‍💻</span>
-        </div>
+        <div className="p-[3px] rounded-full bg-gradient-to-br from-accent-purple via-[#9b8fff] to-accent-teal shadow-2xl">
+  <div className="w-[200px] h-[200px] rounded-full overflow-hidden bg-gradient-to-br from-[#1e1f2e] to-[#0f1015] flex items-center justify-center relative">
+    
+    <Image
+      src="/images/profile.jpeg"
+      alt="Muhammad Afzal"
+      fill
+      className="object-cover"
+    />
+
+    <div className="absolute inset-0 bg-gradient-to-br from-accent-purple/30 via-transparent to-accent-teal/20" />
+  </div>
+</div>
       </div>
 
       {/* Status badge floating below */}
