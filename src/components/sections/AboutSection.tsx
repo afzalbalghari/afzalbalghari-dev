@@ -1,14 +1,15 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { SectionHeader, Badge } from "@/components/ui";
 import { staggerContainer, staggerItem, fadeLeft, fadeRight, viewportOnce } from "@/lib/motion";
 
 const FACTS = [
-  { icon: "📍", label: "Location",     value: "Your City, Country" },
+  { icon: "📍", label: "Location",     value: "Gilgit Baltistan, Pakistan" },
   { icon: "💼", label: "Current Role", value: "Full-Stack Dev @ Netzing Technology" },
-  { icon: "🎓", label: "Degree",       value: "B.Sc. Computer Science" },
-  { icon: "🌐", label: "Languages",    value: "English, Urdu" },
+  { icon: "🎓", label: "Degree",       value: "BS Software Engineering" },
+  { icon: "🌐", label: "Languages",    value: "English, Urdu, Balti" },
   { icon: "☕", label: "Fuel",         value: "Coffee & curiosity" },
   { icon: "🕐", label: "Availability", value: "Open to opportunities" },
 ];
@@ -53,13 +54,18 @@ export function AboutSection() {
               <motion.div
                 whileHover={{ scale: 1.05, rotate: 3 }}
                 transition={{ type: "spring", stiffness: 300, damping: 18 }}
-                className="w-24 h-24 rounded-full bg-gradient-to-br from-accent-purple to-accent-teal flex items-center justify-center text-[40px] border-4 border-bg-primary shadow-lg"
+                className="relative w-24 h-24 rounded-full overflow-hidden border-4 border-bg-primary shadow-lg"
               >
-                👨‍💻
+                <Image
+                  src="/images/picPS.png"
+                  alt="Muhammad Afzal"
+                  fill
+                  className="object-cover"
+                />
               </motion.div>
               <div>
-                <h3 className="font-display font-bold text-[18px] text-text-primary">Your Name</h3>
-                <p className="font-mono text-[12px] text-accent-teal mt-0.5">Full-Stack · DevOps · Cloud</p>
+                <h3 className="font-display font-bold text-[18px] text-text-primary">Muhammad Afzal</h3>
+                <p className="font-mono text-[12px] text-accent-teal mt-0.5">Full-Stack Developer</p>
               </div>
               <div className="flex items-center gap-2 bg-bg-tertiary border border-border rounded-full px-4 py-1.5">
                 <span className="w-2 h-2 rounded-full bg-accent-teal shadow-[0_0_8px_rgba(78,204,163,0.5)] animate-pulse" />
@@ -109,7 +115,7 @@ export function AboutSection() {
 
             {/* Currently working with */}
             <div>
-              <p className="font-mono text-[11px] text-text-muted uppercase tracking-[2px] mb-3">Currently working with</p>
+              <p className="font-mono text-[11px] text-accent-teal uppercase tracking-[2px] mb-3">Currently working with</p>
               <div className="grid grid-cols-2 gap-2">
                 {STACK_NOW.map(({ icon, name }, i) => (
                   <motion.div
@@ -130,7 +136,7 @@ export function AboutSection() {
 
             {/* Interests */}
             <div>
-              <p className="font-mono text-[11px] text-text-muted uppercase tracking-[2px] mb-3">Interests</p>
+              <p className="font-mono text-[11px] text-accent-teal uppercase tracking-[2px] mb-3">Interests</p>
               <motion.div className="flex flex-wrap gap-2" variants={staggerContainer} initial="hidden" whileInView="visible" viewport={viewportOnce}>
                 {INTERESTS.map((interest) => (
                   <motion.span

@@ -45,10 +45,10 @@ function AvatarCircle() {
       <div className="p-[3px] rounded-full bg-gradient-to-br from-accent-purple via-[#9b8fff] to-accent-teal shadow-2xl">
         {/* Circle image area */}
         <div className="p-[3px] rounded-full bg-gradient-to-br from-accent-purple via-[#9b8fff] to-accent-teal shadow-2xl">
-  <div className="w-[200px] h-[200px] rounded-full overflow-hidden bg-gradient-to-br from-[#1e1f2e] to-[#0f1015] flex items-center justify-center relative">
+  <div className="w-[220px] h-[220px] md:w-[260px] md:h-[260px] lg:w-[320px] lg:h-[320px] rounded-full overflow-hidden bg-gradient-to-br from-[#1e1f2e] to-[#0f1015] flex items-center justify-center relative">
     
     <Image
-      src="/images/profile.jpeg"
+      src="/images/profP.png"
       alt="Muhammad Afzal"
       fill
       className="object-cover"
@@ -64,7 +64,7 @@ function AvatarCircle() {
         initial={{ opacity: 0, y: 8 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.9, duration: 0.5 }}
-        className="absolute -bottom-4 left-0 right-0 flex items-center justify-center whitespace-nowrap bg-bg-secondary/90 backdrop-blur-md border border-border rounded-full px-3 py-1.5 shadow-xl"
+        className="absolute -bottom-9 left-0 right-0 flex items-center justify-center whitespace-nowrap bg-bg-secondary/90 backdrop-blur-md border border-border rounded-full px-3 py-1.5 shadow-xl"
       >
         <span className="w-1.5 h-1.5 rounded-full bg-accent-teal shadow-[0_0_6px_rgba(78,204,163,0.7)] animate-pulse" />
         <span className="font-mono text-[11px] text-text-secondary">Available for hire</span>
@@ -164,20 +164,20 @@ export function HeroSection() {
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-accent-purple/60 to-transparent" />
 
       {/* ── Content ── */}
-      <div className="relative z-10 max-w-[900px] mx-auto px-8 md:px-12 py-20 w-full">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-y-12 gap-x-8 lg:gap-x-48 lg:gap-y-0 items-center">
+      <div className="relative z-10 max-w-[960px] mx-auto px-8 md:px-12 py-20 w-full">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-y-12 gap-x-8 lg:gap-x-12 lg:gap-y-0 items-center">
 
           {/* Left – text */}
           <motion.div
             variants={staggerContainer}
             initial="hidden"
             animate="visible"
-            className="flex flex-col gap-6"
+            className="flex flex-col gap-6 lg:pr-6"
           >
             {/* Status pill */}
             <motion.div variants={fadeUp} className="flex items-center gap-2.5">
               <span className="w-2 h-2 rounded-full bg-accent-teal shadow-[0_0_10px_rgba(78,204,163,0.7)] animate-pulse" />
-              <span className="font-mono text-[12px] text-text-muted tracking-widest uppercase">
+              <span className="font-mono text-[12px] text-accent-teal tracking-widest uppercase">
                 available for new opportunities
               </span>
             </motion.div>
@@ -185,9 +185,9 @@ export function HeroSection() {
             {/* Headline */}
             <motion.div variants={blurIn}>
               <h1 className="font-display font-black text-[clamp(42px,6.5vw,72px)] leading-[1.03] tracking-[-2.5px]">
-                <span className="text-text-primary">Full-Stack</span>
+                <span className="text-text-primary">M-Afzal</span>
                 <br />
-                <span className="gradient-text-accent">Developer.</span>
+                <span className="gradient-text-accent">Balghari.</span>
               </h1>
             </motion.div>
 
@@ -235,7 +235,7 @@ export function HeroSection() {
           </motion.div>
 
           {/* Right – avatar circle (no box, no code card) */}
-          <div className="hidden lg:flex items-center lg:justify-end lg:pl-40">
+          <div className="hidden lg:flex items-center lg:justify-end transform lg:translate-x-14">
             <AvatarCircle />
           </div>
         </div>
