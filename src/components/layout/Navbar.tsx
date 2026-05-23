@@ -42,8 +42,8 @@ export function Navbar() {
       {/* Logo */}
       <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
         <Link href="#hero" className="font-display font-extrabold text-[18px] text-text-primary">
-          dev<span className="text-accent-purple">.</span>
-          <span className="gradient-text-accent">portfolio</span>
+          <span className="gradient-text-accent">afzalBalghari</span><span className="text-accent-purple">.</span>
+          Dev
         </Link>
       </motion.div>
 
