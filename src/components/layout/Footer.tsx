@@ -4,10 +4,10 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 
 const SOCIAL_LINKS = [
-  { label: "GitHub",   icon: "🐙", href: "https://github.com/yourname" },
-  { label: "LinkedIn", icon: "💼", href: "https://linkedin.com/in/yourname" },
-  { label: "Twitter",  icon: "🐦", href: "https://twitter.com/yourname" },
-  { label: "Email",    icon: "✉️", href: "mailto:hello@yourname.dev" },
+  { label: "GitHub",   icon: "🐙", href: "https://github.com/afzalbalghari" },
+  { label: "LinkedIn", icon: "💼", href: "https://www.linkedin.com/in/muhammad-afzal-balghari" },
+  { label: "Twitter",  icon: "🐦", href: "https://twitter.com/afzalbalghari" },
+  { label: "Email",    icon: "✉️", href: "mailto:mafzalbalghari101@gmail.com" },
 ];
 
 export function Footer() {

@@ -6,9 +6,9 @@ import { useContactForm } from "@/hooks/useContactForm";
 import { staggerContainer, staggerItem, fadeLeft, fadeRight, viewportOnce } from "@/lib/motion";
 
 const CONTACT_INFO = [
-  { icon: "✉️", label: "Email",    value: "hello@yourname.dev",       href: "mailto:hello@yourname.dev" },
-  { icon: "💼", label: "LinkedIn", value: "linkedin.com/in/yourname", href: "https://linkedin.com/in/yourname" },
-  { icon: "🐙", label: "GitHub",   value: "github.com/yourname",      href: "https://github.com/yourname" },
+  { icon: "✉️", label: "Email",    value: "mafzalbalghari101@gmail.com",       href: "mailto:mafzalbalghari101@gmail.com" },
+  { icon: "💼", label: "LinkedIn", value: "linkedin.com/in/muhammad-afzal-balghari", href: "https://www.linkedin.com/in/muhammad-afzal-balghari" },
+  { icon: "🐙", label: "GitHub",   value: "github.com/afzalbalghari",      href: "https://github.com/afzalbalghari" },
   { icon: "📍", label: "Location", value: "Open to remote worldwide",  href: null },
 ];
 
