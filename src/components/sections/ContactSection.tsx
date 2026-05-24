@@ -42,7 +42,7 @@ export function ContactSection() {
             <div className="mb-2">
               <h3 className="font-display font-bold text-[15px] text-text-primary mb-1">Say hello 👋</h3>
               <p className="text-text-secondary text-[13px] leading-relaxed">
-                I'm currently looking for new opportunities. Whether you have a question or just want to say hi, my inbox is always open.
+                I am currently looking for new opportunities. Whether you have a question or just want to say hi, my inbox is always open.
               </p>
             </div>
             {CONTACT_INFO.map(({ icon, label, value, href }) => (
