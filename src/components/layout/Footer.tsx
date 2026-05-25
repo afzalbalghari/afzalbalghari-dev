@@ -6,7 +6,6 @@ import { motion } from "framer-motion";
 const SOCIAL_LINKS = [
   { label: "GitHub",   icon: "🐙", href: "https://github.com/afzalbalghari" },
   { label: "LinkedIn", icon: "💼", href: "https://www.linkedin.com/in/muhammad-afzal-balghari" },
-  { label: "Twitter",  icon: "🐦", href: "https://twitter.com/afzalbalghari" },
   { label: "Email",    icon: "✉️", href: "mailto:mafzalbalghari101@gmail.com" },
 ];
 
@@ -21,7 +20,7 @@ export function Footer() {
             dev<span className="text-accent-purple">.</span><span className="gradient-text-accent">portfolio</span>
           </p>
           <p className="font-mono text-[12px] text-text-muted">
-            © {year} — Built with Next.js, Tailwind & Framer Motion
+            © {year} — Built with Afzal Balghari
           </p>
         </div>
         <div className="flex items-center gap-4">
