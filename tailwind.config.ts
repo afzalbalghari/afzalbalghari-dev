@@ -15,38 +15,52 @@ const config: Config = {
         mono:    ["var(--font-dm-mono)", "monospace"],
       },
       colors: {
-        "bg-primary":    "#0a0b0f",
-        "bg-secondary":  "#0f1015",
-        "bg-tertiary":   "#14151c",
-        "surface":       "#1a1b23",
-        "surface-hover": "#1f2029",
-        "border":        "#2a2b35",
-        "border-hover":  "#353645",
-        "accent-purple": "#6c63ff",
-        "accent-teal":   "#4ecca3",
-        "accent-coral":  "#ff6b6b",
-        "accent-yellow": "#f4c430",
-        "text-primary":  "#f0f0f5",
-        "text-secondary":"#9a9ab0",
-        "text-muted":    "#5a5a70",
+        /* ── blacks ── */
+        "bk":     "#020406",
+        "bk2":    "#05080a",
+        "bk3":    "#080d0a",
+        "card":   "#0a100c",
+        "card2":  "#0d1510",
+        /* ── greens ── */
+        "g":      "#00ff87",
+        "g-dim":  "#00cc6a",
+        "g-dark": "#004d28",
+        /* ── text ── */
+        "tw":     "#e8f5ee",   /* text white  */
+        "ts":     "#7aad8f",   /* text secondary */
+        "tm":     "#3d6b50",   /* text muted */
+        /* ── borders ── */
+        "br":     "#0f2018",
+        "br2":    "#1a3528",
       },
       backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
+        "grad-radial": "radial-gradient(var(--tw-gradient-stops))",
+      },
+      boxShadow: {
+        "g-sm":  "0 0 12px rgba(0,255,135,0.25)",
+        "g-md":  "0 0 30px rgba(0,255,135,0.2)",
+        "g-lg":  "0 0 60px rgba(0,255,135,0.15)",
+        "g-xl":  "0 0 100px rgba(0,255,135,0.12)",
+        "card":  "0 8px 32px rgba(0,0,0,0.6)",
+        "card-h":"0 16px 48px rgba(0,255,135,0.12)",
       },
       animation: {
-        float: "float 6s ease-in-out infinite",
-        scan:  "scan 4s linear infinite",
+        "float":    "float 7s ease-in-out infinite",
+        "float-r":  "float-r 6s ease-in-out infinite",
+        "scan":     "scan 5s linear infinite",
+        "spin-slow":"spin 12s linear infinite",
+        "shimmer":  "shimmer 2.5s linear infinite",
+        "orbit":    "orbit 8s linear infinite",
       },
       keyframes: {
-        float: {
-          "0%,100%": { transform: "translateY(0px)"  },
-          "50%":     { transform: "translateY(-14px)" },
-        },
-        scan: { to: { top: "200%" } },
+        float:    { "0%,100%":{ transform:"translateY(0px) rotate(0deg)" }, "50%":{ transform:"translateY(-18px) rotate(1.5deg)" } },
+        "float-r":{ "0%,100%":{ transform:"translateY(0px) rotate(0deg)" }, "50%":{ transform:"translateY(-14px) rotate(-1.5deg)" } },
+        scan:     { to:{ top:"200%" } },
+        shimmer:  { "0%":{ backgroundPosition:"200% center" }, "100%":{ backgroundPosition:"-200% center" } },
+        orbit:    { from:{ transform:"rotate(0deg) translateX(120px) rotate(0deg)" }, to:{ transform:"rotate(360deg) translateX(120px) rotate(-360deg)" } },
       },
     },
   },
   plugins: [],
 };
-
 export default config;
