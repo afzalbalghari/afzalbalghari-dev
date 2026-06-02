@@ -20,7 +20,7 @@ export function ContactSection() {
 
       <div className="relative z-10 max-w-[900px] mx-auto px-8">
         <motion.div variants={fadeLeft} initial="hidden" whileInView="visible" viewport={vp}>
-          <SectionHeader label="10 — Contact" title="Let's Work Together" subtitle="Open to full-time roles, freelance projects, and interesting collaborations." />
+          <SectionHeader label="10 — Contact" title="Let&apos;s Work Together" subtitle="Open to full-time roles, freelance projects, and interesting collaborations." />
         </motion.div>
 
         <motion.div variants={stagger} initial="hidden" whileInView="visible" viewport={vp}
@@ -30,7 +30,7 @@ export function ContactSection() {
           <motion.div variants={fadeLeft} className="flex flex-col gap-3">
             <div className="mb-2">
               <h3 className="font-display font-bold text-[15px] text-tw mb-1">Say hello 👋</h3>
-              <p className="text-ts text-[13px] leading-relaxed">I'm currently looking for new opportunities. Whether you have a question or just want to say hi, my inbox is always open.</p>
+              <p className="text-ts text-[13px] leading-relaxed">I am currently looking for new opportunities. Whether you have a question or just want to say hi, my inbox is always open.</p>
             </div>
             {INFO.map(({ icon, label, value, href }) => (
               <motion.div key={label} variants={item}

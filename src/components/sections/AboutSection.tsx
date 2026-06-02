@@ -77,7 +77,7 @@ export function AboutSection() {
           {/* Right */}
           <motion.div variants={fadeRight} className="md:col-span-3 flex flex-col gap-6">
             {[
-              <>I'm a Full-Stack Developer with <span className="text-g font-medium">hands-on industry experience</span> gained through a one-year internship at <span className="text-g font-medium">Netzing Technology</span>, During this time, I developed web applications, worked with modern technologies, learned cloud deployment and system maintenance.</>,
+              <>I am a Full-Stack Developer with <span className="text-g font-medium">hands-on industry experience</span> gained through a one-year internship at <span className="text-g font-medium">Netzing Technology</span>, During this time, I developed web applications, worked with modern technologies, learned cloud deployment and system maintenance.</>,
               <>My journey into software began with curiosity about how websites work, which quickly grew into a deep passion for <span className="text-g font-medium"> clean code, developer experience, and thoughtfully engineered systems</span>.  Today, I focus on building production-ready applications, automating development and deployment processes using modern full-stack and DevOps tools.</>,
               <>I enjoy solving real-world problems through technology—whether that means designing <span className="text-g font-medium">efficient databases, building CI/CD pipelines, or creating intuitive user experiences.</span> Beyond coding, I spend time exploring open-source projects, expanding my knowledge in cloud architecture and software engineering.</>,
             ].map((para, i) => (
