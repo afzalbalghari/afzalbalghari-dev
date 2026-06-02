@@ -1,33 +1,19 @@
 import { cn } from "@/lib/utils";
 import type { BadgeVariant } from "@/types";
 
-const variantStyles: Record<BadgeVariant | "default", string> = {
-  default: "bg-surface text-text-secondary border-border",
-  accent:
-    "bg-[rgba(108,99,255,.15)] text-[#a09af0] border-[rgba(108,99,255,.3)]",
-  green:
-    "bg-[rgba(78,204,163,.12)] text-accent-teal border-[rgba(78,204,163,.25)]",
-  yellow:
-    "bg-[rgba(244,196,48,.10)] text-accent-yellow border-[rgba(244,196,48,.25)]",
-  red:
-    "bg-[rgba(255,107,107,.12)] text-[#ff8a8a] border-[rgba(255,107,107,.25)]",
+const styles: Record<BadgeVariant, string> = {
+  g:       "bg-[rgba(0,255,135,0.12)] text-g border-[rgba(0,255,135,0.3)]",
+  blue:    "bg-[rgba(0,229,255,0.1)]  text-[#00e5ff] border-[rgba(0,229,255,0.25)]",
+  yellow:  "bg-[rgba(255,214,0,0.1)]  text-[#ffd600] border-[rgba(255,214,0,0.25)]",
+  red:     "bg-[rgba(255,82,82,0.1)]  text-[#ff5252] border-[rgba(255,82,82,0.25)]",
+  default: "bg-card2 text-ts border-br2",
 };
 
-interface BadgeProps {
-  children: React.ReactNode;
-  variant?: BadgeVariant | "default";
-  className?: string;
-}
+interface BadgeProps { children: React.ReactNode; variant?: BadgeVariant; className?: string; }
 
 export function Badge({ children, variant = "default", className }: BadgeProps) {
   return (
-    <span
-      className={cn(
-        "inline-block px-2 py-0.5 rounded text-[11px] font-mono font-medium border",
-        variantStyles[variant],
-        className
-      )}
-    >
+    <span className={cn("inline-block px-2 py-0.5 rounded text-[11px] font-mono font-medium border", styles[variant], className)}>
       {children}
     </span>
   );

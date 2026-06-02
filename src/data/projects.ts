@@ -1,91 +1,9 @@
 import type { Project } from "@/types";
-
 export const projects: Project[] = [
-  {
-    id: "cloud-deploy",
-    icon: "📦",
-    image: "https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?w=600&auto=format&fit=crop&q=80",
-    title: "CloudDeploy Dashboard",
-    description:
-      "Real-time deployment monitoring dashboard with live log streaming, rollback controls, and Slack alerting. Handles 50+ concurrent deploys.",
-    tags: [
-      { label: "Next.js",    variant: "accent" },
-      { label: "AWS ECS",   variant: "green"  },
-      { label: "WebSockets",variant: "yellow" },
-    ],
-    href: "#",
-    featured: true,
-  },
-  {
-    id: "ecommerce",
-    icon: "🛒",
-    image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&auto=format&fit=crop&q=80",
-    title: "E-Commerce Platform",
-    description:
-      "Full-stack multi-vendor marketplace with Stripe payments, inventory management, and a headless CMS. 99.9% uptime SLA on AWS.",
-    tags: [
-      { label: "React",   variant: "accent" },
-      { label: "Node.js", variant: "green"  },
-      { label: "Stripe",  variant: "red"    },
-    ],
-    href: "#",
-    featured: true,
-  },
-  {
-    id: "ai-tasks",
-    icon: "🤖",
-    image: "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=600&auto=format&fit=crop&q=80",
-    title: "AI Task Manager",
-    description:
-      "Smart task manager using OpenAI to auto-prioritize, generate sub-tasks, and summarize blockers. Integrates with GitHub and Jira.",
-    tags: [
-      { label: "TypeScript", variant: "accent" },
-      { label: "OpenAI",    variant: "green"  },
-      { label: "PostgreSQL",variant: "yellow" },
-    ],
-    href: "#",
-    featured: true,
-  },
-  {
-    id: "infra-cost",
-    icon: "📊",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&auto=format&fit=crop&q=80",
-    title: "Infra Cost Analyzer",
-    description:
-      "CLI + web app to visualize AWS spend, detect idle resources, and forecast monthly costs. Saved clients avg $2k/month.",
-    tags: [
-      { label: "Python",   variant: "accent" },
-      { label: "Terraform",variant: "green"  },
-      { label: "AWS SDK",  variant: "yellow" },
-    ],
-    href: "#",
-  },
-  {
-    id: "auth-service",
-    icon: "🔐",
-    image: "https://images.unsplash.com/photo-1614064641938-3bbee52942c7?w=600&auto=format&fit=crop&q=80",
-    title: "Auth Microservice",
-    description:
-      "Production-ready auth service with JWT, OAuth2, RBAC, and refresh token rotation. Docker-ready with full test coverage.",
-    tags: [
-      { label: "Node.js", variant: "accent" },
-      { label: "Redis",   variant: "green"  },
-      { label: "OAuth2",  variant: "red"    },
-    ],
-    href: "#",
-  },
-  {
-    id: "api-gateway",
-    icon: "📡",
-    image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&auto=format&fit=crop&q=80",
-    title: "API Gateway Boilerplate",
-    description:
-      "Open-source starter with rate limiting, request validation, structured logging, and OpenAPI docs. 300+ GitHub stars.",
-    tags: [
-      { label: "Fastify",   variant: "accent" },
-      { label: "TypeScript",variant: "green"  },
-      { label: "OpenAPI",   variant: "yellow" },
-    ],
-    href: "#",
-  },
+  { id:"cloud-deploy", icon:"📦", image:"https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?w=600&auto=format&fit=crop&q=80", title:"CloudDeploy Dashboard", description:"Real-time deployment monitoring with live log streaming, rollback controls, and Slack alerting. Handles 50+ concurrent deploys.", tags:[{label:"Next.js",variant:"g"},{label:"AWS ECS",variant:"blue"},{label:"WebSockets",variant:"yellow"}], href:"#", featured:true },
+  { id:"ecommerce", icon:"🛒", image:"https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&auto=format&fit=crop&q=80", title:"E-Commerce Platform", description:"Full-stack multi-vendor marketplace with Stripe payments, inventory management, and headless CMS. 99.9% uptime on AWS.", tags:[{label:"React",variant:"g"},{label:"Node.js",variant:"blue"},{label:"Stripe",variant:"red"}], href:"#", featured:true },
+  { id:"ai-tasks", icon:"🤖", image:"https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=600&auto=format&fit=crop&q=80", title:"AI Task Manager", description:"Smart task manager using OpenAI to auto-prioritize, generate sub-tasks, and summarize blockers. Integrates with GitHub and Jira.", tags:[{label:"TypeScript",variant:"g"},{label:"OpenAI",variant:"blue"},{label:"PostgreSQL",variant:"yellow"}], href:"#", featured:true },
+  { id:"infra-cost", icon:"📊", image:"https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&auto=format&fit=crop&q=80", title:"Infra Cost Analyzer", description:"CLI + web app to visualize AWS spend, detect idle resources, and forecast monthly costs. Saved clients avg $2k/month.", tags:[{label:"Python",variant:"g"},{label:"Terraform",variant:"blue"},{label:"AWS SDK",variant:"yellow"}], href:"#" },
+  { id:"auth-service", icon:"🔐", image:"https://images.unsplash.com/photo-1614064641938-3bbee52942c7?w=600&auto=format&fit=crop&q=80", title:"Auth Microservice", description:"Production-ready auth service with JWT, OAuth2, RBAC, and refresh token rotation. Docker-ready with full test coverage.", tags:[{label:"Node.js",variant:"g"},{label:"Redis",variant:"blue"},{label:"OAuth2",variant:"red"}], href:"#" },
+  { id:"api-gateway", icon:"📡", image:"https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&auto=format&fit=crop&q=80", title:"API Gateway Boilerplate", description:"Open-source starter with rate limiting, request validation, structured logging, and OpenAPI docs. 300+ GitHub stars.", tags:[{label:"Fastify",variant:"g"},{label:"TypeScript",variant:"blue"},{label:"OpenAPI",variant:"yellow"}], href:"#" },
 ];

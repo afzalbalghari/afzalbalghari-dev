@@ -44,6 +44,26 @@
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
+  .g-text {
+    background: linear-gradient(135deg, #00ff87 0%, #00e5ff 30%, #00ff87 60%, #4de8ff 100%);
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: text-gradient-slide 5s ease infinite;
+    text-shadow: 0 0 16px rgba(0, 255, 135, 0.25);
+  }
+  .g-text:hover {
+    text-shadow: 0 0 24px rgba(0, 255, 135, 0.35);
+  }
+  .num-glow {
+    text-shadow: 0 0 18px rgba(0, 255, 135, 0.22);
+  }
+
+  @keyframes text-gradient-slide {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+  }
 
   /* Card shine sweep */
   .card-shine {
