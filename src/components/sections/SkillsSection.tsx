@@ -45,7 +45,8 @@ export function SkillsSection() {
                   <div key={skill.name} className={`flex items-center gap-2.5 py-2 ${i < group.skills.length-1 ? "border-b border-br" : ""}`}>
                     {skill.logo ? (
                       <img src={skill.logo} alt={skill.name}
-                        className="w-5 h-5 object-contain rounded flex-shrink-0 brightness-90 saturate-110" />
+                        className="w-5 h-5 object-contain rounded flex-shrink-0 brightness-90 saturate-110"
+                        loading="lazy" decoding="async" />
                     ) : <div className="w-5 h-5 rounded bg-br flex-shrink-0" />}
                     <div className="flex-1 min-w-0">
                       <p className="text-[12px] text-tw truncate mb-1">{skill.name}</p>

@@ -1,6 +1,6 @@
 import type { DevOpsTool } from "@/types";
 export const devopsTools: DevOpsTool[] = [
-  { id:"aws",     logo:"https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg", name:"AWS",            level:"Advanced"     },
+  { id:"aws",     logo:"/images/aws.svg", name:"AWS",            level:"Advanced"     },
   { id:"docker",  logo:"https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg",                      name:"Docker",         level:"Advanced"     },
   { id:"k8s",     logo:"https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg",                  name:"Kubernetes",     level:"Intermediate" },
   { id:"tf",      logo:"https://cdn.jsdelivr.net/gh/devicons/devicon/icons/terraform/terraform-original.svg",                 name:"Terraform",      level:"Advanced"     },
