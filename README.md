@@ -1,4 +1,4 @@
-# Developer Portfolio
+# afzalBalghari.dev
 
 A modern SaaS-style developer portfolio built with **Next.js 14**, **TypeScript**, **Tailwind CSS**, and **Framer Motion**.
 
@@ -108,4 +108,4 @@ One-click deploy to Vercel:
 ```bash
 npx vercel
 ```
-## Link: 
+## Link: https://afzalbalghari.dev.vercel.app/
